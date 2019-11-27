@@ -1,5 +1,8 @@
-// Javascript exercise: Counting number of vowels in a string with JavaScript!
-// Youtube | Truzz Blogg
+/*
+Method nº 1:
+Javascript exercise: Counting number of vowels in a string with JavaScript!
+Youtube | Truzz Blogg
+*/
 
 function vowelCounter(str) {
   let allVowels = 'aeiouAEIOU';
@@ -16,11 +19,32 @@ function vowelCounter(str) {
 
 console.log(vowelCounter("Hello YoUtUbe"));
 
-
-
-
+// Optional approach - Explaining indexOf Method
 // Let's see how the 'indexOf' function works!
 
 // x = 'HelloTruzzBlogg';
 // idx = x.indexOf('f');
 // console.log(idx);
+
+/*
+Method nº 2:
+Javascript exercise: How to count the number of vowels in a
+string using Javascript.
+*/
+
+let allVowels = ["a", "e", "i", "o", "u"];
+
+function vowelCounter(str) {
+  let vCounter = 0;
+
+  for (let i of str.toLowerCase()){
+      if (allVowels.includes(i)) {
+         vCounter++;
+      }
+  }
+  console.log(`Your original string is: \n ${str} \n `);
+  console.log(`The text contains ${vCounter} vowel(s)`);
+  return vCounter;
+}
+
+vowelCounter('Oi tudo bem');
