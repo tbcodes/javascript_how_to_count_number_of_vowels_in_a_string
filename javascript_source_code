@@ -48,3 +48,25 @@ function vowelCounter(str) {
 }
 
 vowelCounter('Oi tudo bem');
+
+/*
+BONUS: Method nº 3 - Using charAt:
+Javascript exercise: How to count the number of vowels in a
+string using Javascript.
+*/
+
+  function vowelCounter(str) {
+  let strLower = str.toLowerCase();
+  let vCounter = 0;
+  
+  for(let i = 0; i < strLower.length; i++) {
+    let charAt_ = strLower.charAt(i);
+    if(charAt_ == 'a' || charAt_ == 'e' || charAt_ == 'i' || charAt_ == 'o' || charAt_ == 'u') {
+      console.log("The value of str[i] is: " + strLower[i]);
+      vCounter += 1;
+    }   
+  }
+  return vCounter;
+}
+
+console.log(vowelCounter("Hello TruzzBlogg! HI ARE YOU TODAY?"));
